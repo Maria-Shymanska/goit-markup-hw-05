@@ -61,7 +61,15 @@
     <section class="hero-section section">
       <div class="container">
         <h1 class="hero-first-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-btn">Замовити послугу</button>
+        <button class="hero-btn" data-modal-open type="button">Замовити послугу</button>
+      </div>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button data-modal-close><svg class="modal-hero-icon" width="30" height="30">
+              <use href="./images/icons.svg#buttons"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -124,17 +132,32 @@
       </div>
     </section>
 
-    <section class="section work">
+
+    <!-- gallery -->
+
+
+    <section class="section">
       <div class="container">
         <h2 class="gallery-title">Чим ми займаємося</h2>
         <ul class="gallery-list list">
-          <li class="gallery-item"><img src="./images/photo1.jpg" alt="working process" width="370" height="294"></li>
-          <div class="overlay-box">
-            <p class="overlay-text">
-            </p>
-          </div>
-          <li class="gallery-item"><img src="./images/photo2.jpg" alt="working process" width="370" height="294"></li>
-          <li class="gallery-item"><img src="./images/photo3.jpg" alt="working process" width="370" height="294"></li>
+          <li class="gallery-item">
+            <div class="overlay-box">
+              <img src="./images/photo1.jpg" alt="working process" width="370" height="294">
+              <p class="overlay-text">Десктопні додатки</p>
+            </div>
+          </li>
+          <li class="gallery-item">
+            <div class="overlay-box">
+              <img src="./images/photo2.jpg" alt="working process" width="370" height="294">
+              <p class="overlay-text">Мобільні додатки</p>
+            </div>
+          </li>
+          <li class="gallery-item">
+            <div class="overlay-box">
+              <img src="./images/photo3.jpg" alt="working process" width="370" height="294">
+              <p class="overlay-text">Дизайнерські рішення</p>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
