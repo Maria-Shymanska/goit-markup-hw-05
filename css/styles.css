@@ -172,9 +172,11 @@ img {
 
 .header-item {
   position: relative;
+  display: block;
+  text-decoration: none;
 }
 
-.current::after {
+.header-item.current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -185,13 +187,11 @@ img {
   margin-bottom: -1px;
   border-radius: 4px;
   background-color: var(--accent-color);
-  opacity: 0;
 }
 
-.header-item.current::after,
-.header-item:hover {
+/* .header-nav-link.current::after {
   opacity: 1;
-}
+} */
 
 /*------ main------- */
 
@@ -321,6 +321,12 @@ img {
   color: var(--main-text-color);
   margin-bottom: 50px;
 }
+.overlay-box {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  opacity: 1;
+}
 
 .overlay-text {
   display: flex;
@@ -331,18 +337,11 @@ img {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  align-items: center;
+  text-align: center;
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
 }
 
-.overlay-box {
-  display: flex;
-  position: relative;
-  text-align: center;
-  align-items: flex-end;
-  opacity: 1;
-}
 
 /* --team-- */
 
@@ -583,6 +582,7 @@ img {
   left: 0;
   width: 100%;
   height: 294px;
+  z-index: 10;
 
 
   transform: translateY(100%);
@@ -728,7 +728,7 @@ footer {
 /* modal */
 
 .backdrop {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 528px;
@@ -749,7 +749,6 @@ footer {
 .modal {
   position: absolute;
   width: 528;
-  height: 581;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -760,9 +759,16 @@ footer {
 }
 
 .icon-close-black {
-  background: #ffffff;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
   display: block;
   align-items: center;
   justify-content: center;
