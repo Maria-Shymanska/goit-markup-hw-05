@@ -238,10 +238,6 @@ img {
   padding: 10px 32px 10px 32px;
   display: block;
   margin: 0 auto;
-
-  transition-property: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -249,42 +245,6 @@ img {
   background-color: #188ce8;
 }
 
-/* modal
-
-.beckdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
-  backdrop-filter: blur(2px);
-}
-.modal {
-  position: absolute;
-  width: 528;
-  height: 581;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  border-radius: 4px;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.icon-close-black {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-  display: block;
-  align-items: center;
-  justify-content: center;
-} */
 
 /* --benefits-- */
 
@@ -635,7 +595,6 @@ img {
 
 
 
-
 .product-actions {
 position: absolute;
 padding: 63px 24px;
@@ -768,7 +727,7 @@ footer {
 
 /* modal */
 
-.beckdrop .is-hidden {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -780,13 +739,20 @@ footer {
   pointer-events: initial;
   backdrop-filter: blur(2px);
 }
+
+.backdrop .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal {
   position: absolute;
   width: 528;
   height: 581;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -801,3 +767,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.backdrop.is-hidden .modal {
+  transform: scale(0.5);
+}
+ 
