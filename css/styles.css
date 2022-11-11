@@ -136,6 +136,9 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-mail {
@@ -146,6 +149,9 @@ img {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-tel {
@@ -155,7 +161,13 @@ img {
   color: var(--secondary-text-color);
   display: flex;
   align-items: center;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 .icon-mail {
   fill: currentColor;
   margin-right: 10px;
@@ -189,9 +201,6 @@ img {
   background-color: var(--accent-color);
 }
 
-/* .header-nav-link.current::after {
-  opacity: 1;
-} */
 
 /*------ main------- */
 
@@ -238,7 +247,12 @@ img {
   padding: 10px 32px 10px 32px;
   display: block;
   margin: 0 auto;
+
+  transition-property: #188ce8;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .hero-btn:hover,
 .hero-btn:focus {
@@ -287,7 +301,7 @@ img {
 
 /* .hero-item:not(:last-child) {
   margin-right: 30px;
-} */
+/* } */ 
 
 .benefits-title {
   font-weight: 700;
@@ -304,6 +318,10 @@ img {
 }
 
 /* --galery-- */
+
+.team { 
+  padding-top: 0;
+}
 
 .gallery-item:not(:last-child) {
   margin-right: 30px;
@@ -331,13 +349,14 @@ img {
 .overlay-text {
   display: flex;
   position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
   width: 370px;
   height: 70px;
   color: var(--backround-color);
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
 }
@@ -410,7 +429,12 @@ img {
   color: var(--socials-icon-color);
 
   border-radius: 50%;
+
+  transition-property: color, var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .socials-link:hover,
 .socials-link:focus {
@@ -535,9 +559,7 @@ img {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.socials-link {
-  color: var(--backround-color);
-}
+
 .socials-icon {
   fill: currentColor;
 }
