@@ -266,7 +266,7 @@ img {
   height: 100%; 
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms var(--animation-timing-function), visibility 250ms var(--backround-color);
+  transition: opacity 250ms var(--animation-timing-function), visibility 250ms var(--animation-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -365,8 +365,7 @@ fill: var(--accent-color);
   }
 }
 .icon-close-black {
-  fill: var(--backround-color);
-  transition: fill 250ms var(--animation-timing-function);
+ fill: currentColor;
 }
 
 /* --benefits-- */
@@ -463,7 +462,7 @@ fill: var(--accent-color);
   bottom: 0;
   width: 370px;
   height: 70px;
-  color: var(--backround-color);
+  color: var(--background-color);
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -546,17 +545,18 @@ fill: var(--accent-color);
   width: 44px;
   height: 44px;
   color: var(--socials-icon-color);
-
+  background-color: var(--accent-color);
   border-radius: 50%;
 
-  transition-property: color, var(--accent-color) 250ms var(--animation-timing-function)
+  transition: color 250ms var(--accent-color), background-color 250ms var(--animation-timing-function);
 }
 
 
-.socials-link:hover,
+
+.socials-link:hover
 .socials-link:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
+ background-color: var(--accent-color);
+ color:#ffffff;
 }
 .socials-icon {
   fill: currentColor;
@@ -673,23 +673,29 @@ fill: var(--accent-color);
 }
 
 .footer-item {
-  transition: backround-color 250ms var(--animation-timing-function)
+  transition: background-color 250ms var(--animation-timing-function);
 }
 
 
-.socials-link {
+.socials-link-item {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  transition: color 250ms var(--animation-timing-function);
+  
+  transition:  background-color 250ms var(--animation-timing-function), color 250ms var(--animation-timing-function);
+}
+
+.socials-link-item:hover,
+.socials-link-item:focus {
+ color: #2196f3;
 }
 
 
-.socials-icon {
+.socials-icon-footer {
   fill: currentColor;
 }
 
@@ -774,8 +780,8 @@ color: var(--backround-color);
 
 
 
-.examples-item-list:hover, 
-.examples-item-list:focus {
+.progect-nav:hover, 
+.progect-nav:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
