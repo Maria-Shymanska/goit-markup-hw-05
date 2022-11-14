@@ -161,7 +161,6 @@ img {
   transition: color 250ms var(--animation-timing-function);
 }
 
-
 .icon-mail {
   fill: currentColor;
   margin-right: 10px;
@@ -194,7 +193,6 @@ img {
   border-radius: 4px;
   background-color: var(--accent-color);
 }
-
 
 /*------ main------- */
 
@@ -243,9 +241,8 @@ img {
   display: block;
   margin: 0 auto;
 
-  transition: background-color 250ms var(--animation-timing-function)
+  transition: background-color 250ms var(--animation-timing-function);
 }
-
 
 .hero-btn:hover,
 .hero-btn:focus {
@@ -254,8 +251,6 @@ img {
   border-radius: 4px;
 }
 
-
-
 /* --modal-- */
 
 .backdrop {
@@ -263,10 +258,11 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms var(--animation-timing-function), visibility 250ms var(--animation-timing-function);
+  transition: opacity 250ms var(--animation-timing-function),
+    visibility 250ms var(--animation-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -294,8 +290,8 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  transition: transform 250ms var(--animation-timing-function) opacity 250ms var(--animation-timing-function) visibility 250ms var(--animation-timing-function);
-
+  transition: transform 250ms var(--animation-timing-function) opacity 250ms
+    var(--animation-timing-function) visibility 250ms var(--animation-timing-function);
 }
 
 .modal-button {
@@ -319,53 +315,52 @@ img {
 
 .icon-close-black:hover,
 .icon-close-black:focus {
-fill: var(--accent-color);
+  color: var(--accent-color);
 }
-
 
 .jumpin-button {
   animation: jumpin-button 0.9s both;
 }
 @keyframes jumpin-button {
   0% {
-      transform: translateY(-45px);
-      animation-timing-function: ease-in;
-      opacity: 1;
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
   }
   24% {
-      opacity: 1;
+    opacity: 1;
   }
   40% {
-      transform: translateY(-24px);
-      animation-timing-function: ease-in;
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
   }
   65% {
-      transform: translateY(-12px);
-      animation-timing-function: ease-in;
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
   }
   82% {
-      transform: translateY(-6px);
-      animation-timing-function: ease-in;
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
   }
   93% {
-      transform: translateY(-4px);
-      animation-timing-function: ease-in;
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
   }
   25%,
   55%,
   75%,
   87% {
-      transform: translateY(0px);
-      animation-timing-function: ease-out;
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
   }
   100% {
-      transform: translateY(0px);
-      animation-timing-function: ease-out;
-      opacity: 1;
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
   }
 }
 .icon-close-black {
- fill: currentColor;
+  fill: currentColor;
 }
 
 /* --benefits-- */
@@ -409,7 +404,7 @@ fill: var(--accent-color);
 
 /* .hero-item:not(:last-child) {
   margin-right: 30px;
-/* } */ 
+/* } */
 
 .benefits-title {
   font-weight: 700;
@@ -427,7 +422,7 @@ fill: var(--accent-color);
 
 /* --galery-- */
 
-.team { 
+.team {
   padding-top: 0;
 }
 
@@ -469,7 +464,6 @@ fill: var(--accent-color);
   background: rgba(47, 48, 58, 0.8);
 }
 
-
 /* --team-- */
 
 .socials-list {
@@ -495,7 +489,8 @@ fill: var(--accent-color);
 }
 
 .about-item {
-  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--backround-color);
 }
@@ -537,6 +532,7 @@ fill: var(--accent-color);
   text-align: center;
   margin-bottom: 16px;
 }
+
 .socials-link {
   display: flex;
   align-items: center;
@@ -545,18 +541,16 @@ fill: var(--accent-color);
   width: 44px;
   height: 44px;
   color: var(--socials-icon-color);
-  background-color: var(--accent-color);
   border-radius: 50%;
 
-  transition: color 250ms var(--accent-color), background-color 250ms var(--animation-timing-function);
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--accent-color);
 }
 
-
-
-.socials-link:hover
+.socials-link:hover,
 .socials-link:focus {
- background-color: var(--accent-color);
- color:#ffffff;
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
 .socials-icon {
   fill: currentColor;
@@ -676,7 +670,6 @@ fill: var(--accent-color);
   transition: background-color 250ms var(--animation-timing-function);
 }
 
-
 .socials-link-item {
   display: flex;
   align-items: center;
@@ -685,15 +678,15 @@ fill: var(--accent-color);
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  
-  transition:  background-color 250ms var(--animation-timing-function), color 250ms var(--animation-timing-function);
+  color: #ffffff;
+  transition: color 250ms;
 }
 
 .socials-link-item:hover,
 .socials-link-item:focus {
- color: #2196f3;
+  background-color: #2196f3;
+  color: #ffffff;
 }
-
 
 .socials-icon-footer {
   fill: currentColor;
@@ -734,15 +727,14 @@ fill: var(--accent-color);
 }
 .product-overlay {
   position: absolute;
-  
-  background : rgba(33, 150, 243, 0.9);
+
+  background: rgba(33, 150, 243, 0.9);
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 63px 24px;
   z-index: 10;
-
 
   transform: translateY(101%);
   transition: transform 250ms var(--animation-timing-function);
@@ -759,15 +751,14 @@ fill: var(--accent-color);
 }
 
 .product-actions {
-position: absolute;
-padding: 63px 24px;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.55;
-letter-spacing: 0.03em;
-color: var(--backround-color);
+  position: absolute;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--backround-color);
 }
-
 
 /* --main-- */
 
@@ -778,9 +769,7 @@ color: var(--backround-color);
   gap: 8px;
 }
 
-
-
-.progect-nav:hover, 
+.progect-nav:hover,
 .progect-nav:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -883,5 +872,3 @@ footer {
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
 }
-
-
